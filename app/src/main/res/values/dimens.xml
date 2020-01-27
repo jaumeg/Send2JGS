@@ -1,0 +1,12 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+
+
+    <dimen name="padding_horiz">8dp</dimen>
+    <dimen name="paddin_verti">12dp</dimen>
+    <dimen name="sep_controls">12dp</dimen>
+
+    <dimen name="textsize_edittext">18dp</dimen>
+
+
+</resources>

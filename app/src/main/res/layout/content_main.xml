@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/padding_horiz"
+    android:paddingRight="@dimen/padding_horiz"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="0dp" />
+
+    <!-- lbl_SUBJECT -->
+    <TextView
+        android:id="@+id/lbl_subject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/paddin_verti"
+        android:text="Subject"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- txtSUBJECT -->
+    <!--
+            android:layout_marginTop="@dimen/paddin_verti"
+-->
+    <EditText
+        android:id="@+id/txtSUBJECT"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Subject"
+        android:inputType="textPersonName|textMultiLine"
+        android:layout_marginTop="@dimen/paddin_verti"
+        android:textSize="@dimen/textsize_edittext"
+        app:layout_constraintEnd_toStartOf="@+id/img_clear_subject"
+        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_subject"
+        tools:text="*subject*" />
+
+    <TextView
+        android:id="@+id/lbl_body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/sep_controls"
+        android:text="Body"
+        android:visibility="gone"
+
+        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+        app:layout_constraintTop_toBottomOf="@+id/txtSUBJECT" />
+
+    <EditText
+        android:id="@+id/txtBODY"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="start|top"
+        android:hint="Body"
+        android:inputType="textMultiLine"
+        android:textSize="@dimen/textsize_edittext"
+
+        app:layout_constraintEnd_toStartOf="@+id/img_clear_body"
+        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_body"
+        tools:text="*body*" />
+
+    <TextView
+        android:id="@+id/lbl_emailSendTo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/sep_controls"
+        android:textSize="12dp"
+        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+        app:layout_constraintTop_toBottomOf="@+id/txtBODY"
+        tools:text="lbl_emailSendTo" />
+
+    <TextView
+        android:id="@+id/txtDebug"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/sep_controls"
+        android:fontFamily="monospace"
+        android:gravity="start|top"
+        android:textColor="#aa6600"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnItentSendTo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_emailSendTo"
+        tools:text="debug text\ndebug text\ndebug text\ndebug text\n" />
+
+    <Button
+        android:id="@+id/btnItentSendTo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginEnd="@dimen/padding_horiz"
+        android:layout_marginBottom="@dimen/paddin_verti"
+        android:background="@drawable/button1"
+        android:drawableRight="@drawable/ic_share"
+        android:paddingRight="@dimen/padding_horiz"
+        android:text="Compartir"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVertical50percent"
+        app:layout_constraintStart_toStartOf="@+id/guidelineLeft" />
+
+    <Button
+        android:id="@+id/btnSEND"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_horiz"
+        android:background="@drawable/button1"
+        android:drawableRight="@drawable/ic_send"
+        android:paddingRight="16dp"
+        android:text="Enviar"
+        android:textColor="#FFFFFF"
+
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guidelineVertical50percent"
+        app:layout_constraintTop_toTopOf="@+id/btnItentSendTo" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVertical50percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_percent="0.50"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_clear_subject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/txtSUBJECT"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtSUBJECT"
+        app:srcCompat="@drawable/ic_clear_black" />
+
+    <ImageView
+        android:id="@+id/img_clear_body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_clear_black"
+        app:layout_constraintBottom_toBottomOf="@+id/txtBODY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtBODY" />
+
+    <ImageView
+        android:id="@+id/img_ThumbsUP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/txtDebug"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+        app:layout_constraintTop_toBottomOf="@+id/txtBODY"
+        app:srcCompat="@drawable/ic_thumb_up" />
+</androidx.constraintlayout.widget.ConstraintLayout>

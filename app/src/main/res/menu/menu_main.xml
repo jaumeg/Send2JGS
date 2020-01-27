@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="es.utopik.send2jgs.MainActivity">
+    <item
+        android:id="@+id/menuItem_ENVIAR"
+        android:icon="@drawable/ic_send"
+        android:title="Enviar"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/menuItem_COMPARTIR"
+        android:icon="@drawable/ic_share"
+        android:title="Compartir" />
+    <item
+        android:id="@+id/menuItem_TEST"
+        android:icon="@drawable/ic_share"
+        android:title="*test notification*" />
+    <item
+        android:id="@+id/menuItem_SETTINGS"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+</menu>

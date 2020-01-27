@@ -1,0 +1,6 @@
+include ':app'
+rootProject.name='Send2JGS'
+
+//23.01.2020
+include ":jgsUtils"
+project(":jgsUtils").projectDir = file("../jgsUtils")
