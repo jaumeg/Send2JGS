@@ -31,8 +31,8 @@ class MainActivity : AppCompatActivity() {
         val TAG = MainActivity::class.java.name
         const val EMAIL_SENDTO = "info@jaumegelabert.com"
         const val SMTP_SERVER = "mail.jaumegelabert.com"
-        const val SMTP_USER = "test@utopik.es"
-        const val SMTP_PWD = "w8NWXQQ7"
+        const val SMTP_USER = "xxxxx"
+        const val SMTP_PWD = "xxxxx"
         const val SMTP_PORT = "587"
         const val CNT_VERSION = "27.01.2020"
 
